@@ -1,0 +1,22 @@
+class Sol
+{
+    public static int matSearch(int mat[][], int N, int M, int X)
+    {
+        // your code here
+        int j=M-1;
+        int i=0;
+        while(i<N && j>=0){
+            if(mat[i][j]<X){
+                i++;
+            }else if(mat[i][j]>X){
+                j--;
+            }else{
+                return 1;
+            }
+        }
+        return 0;
+    }
+}
+
+
+Link : https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1
