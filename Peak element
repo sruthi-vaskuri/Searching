@@ -1,0 +1,20 @@
+class Solution
+{
+    public int findPeakElement(List<Integer> a)
+    {
+        // Code here
+        int low=0;
+        int high=a.size()-1;
+        while(low<high){
+            int mid=(low+high)/2;
+            if(a.get(low)<=a.get(mid) && a.get(mid)<a.get(mid+1))
+                low=mid+1;
+            else
+               high=mid;
+        }
+        return a.get(high);
+    }
+}
+
+
+LINK : https://practice.geeksforgeeks.org/problems/find-the-highest-number2259/1/?category[]=Binary%20Search&category[]=Binary%20Search&company[]=Amazon&company[]=Microsoft&company[]=Google&company[]=Adobe&company[]=Amazon&company[]=Microsoft&company[]=Google&company[]=Adobe&page=1&query=category[]Binary%20Searchcompany[]Amazoncompany[]Microsoftcompany[]Googlecompany[]Adobepage1company[]Amazoncompany[]Microsoftcompany[]Googlecompany[]Adobecategory[]Binary%20Search#
